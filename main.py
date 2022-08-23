@@ -16,7 +16,7 @@ while True:
                 file.write(name+'\n')
     elif command == '2':
         with open('emails.txt', 'w') as file:
-            emails_list = re.findall(r'(\b[\w\-]+[@][\w\-]+(\.[\w\-]+))', content)
+            emails_list = re.findall(r'(\b[\w\-]+[@][\w\-]+(\.[\w\-]+)+)', content)
             for email in emails_list:
                 file.write(email[0]+'\n')
     elif command == '3':
